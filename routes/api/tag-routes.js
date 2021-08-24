@@ -34,7 +34,10 @@ router.get('/:id', (req, res) => {
       {
         model: Product,
         attributes: ['product_name', 'price', 'stock', 'category_id'],
-        through: ProductTag,
+        through: {
+          model: ProductTag,
+          attributes: []
+        }
       }
     ]
   })
