@@ -31,9 +31,9 @@ Product.init(
       validate: {isNumeric: true}
     },
     category_id: {
-      type: Sequelize.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
-        model: category,
+        model: 'category',
         key: 'id',
       }
     }
